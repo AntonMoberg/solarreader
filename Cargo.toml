@@ -7,3 +7,11 @@ edition = "2021"
 
 [dependencies]
 epub = "2.1.1"
+thiserror = "1.0.56"
+serde = "1.0.195"
+dotenvy = "0.15.7"
+rayon = "1.8.1"
+miette = {version = "5.10.0", features = ["fancy"]}
+
+[dev-dependencies]
+divan = "0.1.11"
