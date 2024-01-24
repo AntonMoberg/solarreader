@@ -1,3 +1,4 @@
+pub mod field;
 use thiserror::Error;
 
 #[derive(Debug, Error)]
@@ -25,7 +26,7 @@ pub struct Meta {
     pub dcterms_creator: field::dcterms_creator,
     pub identifier: field::identifier,
     pub dcterms_title: field::dcterms_title,
-    pub title: field::title,
+    pub title: field::Title,
     pub rights: field::rights,
     pub dcterms_rights: field::dcterms_rights,
     pub subject: field::subject,
