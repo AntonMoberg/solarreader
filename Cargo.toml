@@ -1,4 +1,5 @@
 [package]
+authors = ["Anton Moberg", "Lamafoos", "SonnyTheTwin"]
 name = "solarreader"
 version = "0.1.0"
 edition = "2021"
@@ -6,3 +7,10 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+cortex-m-rt = "0.7.3"
+panic-halt = "0.2.0"
+rp-pico = "0.8.0"
+elf2uf2-rs = "2.0.0"
+
+[build]
+target = "thumbv6m-none-eabi"        # Cortex-M0 and Cortex-M0+
