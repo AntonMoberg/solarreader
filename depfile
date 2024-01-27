@@ -12,11 +12,16 @@ rustup component add llvm-tools-preview
 # Install cargo-generate
 cargo install cargo-generate
 
+# Install node
+curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+
 
 # Fetch raspberry pi pico emulator
 if [ ! -d "dependencies/rp2040js" ]; then
+  cd tools
   git clone https://github.com/wokwi/rp2040js.git
+  cd rp2040js
+  git apply ../rp2040js.patch
+  cd -
 fi
-
-
-mkdir -p dependencies
