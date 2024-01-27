@@ -35,7 +35,10 @@ rustflags = [
 
 # This runner will make a UF2 file and then copy it to a mounted RP2040 in USB
 # Bootloader mode:
-runner = "elf2uf2-rs -d"
+# runner = "elf2uf2-rs -d"
+
+# This runner will use rp2040js emulator to run the solarreader.hex executable
+runner = "tools/run.sh"
 
 # This runner will find a supported SWD debug probe and flash your RP2040 over
 # SWD:
