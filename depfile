@@ -2,6 +2,7 @@
 
 ## This script assumes that you have the rust toolchain installed
 
+
 # Install embedded targets
 rustup target add thumbv6m-none-eabi # For M0, M0+, M1 (Raspberry Pi Pico W)
 
@@ -9,16 +10,15 @@ rustup target add thumbv6m-none-eabi # For M0, M0+, M1 (Raspberry Pi Pico W)
 cargo install cargo-binutils
 rustup component add llvm-tools-preview
 
-# Install cargo-generate
-cargo install cargo-generate
-
 # Install node
 curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
 
+# Install apt dependencies
+sudo apt install build-essential 
 
 # Fetch raspberry pi pico emulator
-if [ ! -d "dependencies/rp2040js" ]; then
+if [ ! -d "tools/rp2040js" ]; then
   cd tools
   git clone https://github.com/wokwi/rp2040js.git
   cd rp2040js
