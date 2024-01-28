@@ -11,6 +11,11 @@ cortex-m-rt = "0.7.3"
 panic-halt = "0.2.0"
 rp-pico = "0.8.0"
 elf2uf2-rs = "2.0.0"
+epub = "2.1.1"
+thiserror = "1.0.56"
+miette = {version = "5.10.0", features = ["fancy"]}
+serde = "1.0.195"
+dotenvy = "0.15.7"
 
 [build]
 target = "thumbv6m-none-eabi"        # Cortex-M0 and Cortex-M0+
